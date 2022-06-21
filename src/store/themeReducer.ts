@@ -9,8 +9,8 @@ const themeSlice = createSlice({
         return 'dark';
       }
       return 'light';
-    }
-  }
+    },
+  },
 });
 
 export const { toggleTheme } = themeSlice.actions;

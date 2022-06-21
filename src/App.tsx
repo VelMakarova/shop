@@ -1,19 +1,21 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { Header } from './components';
-import { RootState } from './store';
+import { useAppSelector } from './hooks';
+import { LoginPage } from './pages';
 
 const StyledApp = styled.div`
-  background-color: ${(props) => (props.theme === 'light' ? 'white' : 'black')};
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
 `;
 
 function App() {
-  const { theme } = useSelector((state: RootState) => state);
+  const { theme } = useAppSelector((state) => state);
 
   return (
     <StyledApp theme={theme}>
-      <Header />
+      <LoginPage />
     </StyledApp>
   );
 }
