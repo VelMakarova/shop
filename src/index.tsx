@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { createGlobalStyle } from 'styled-components';
 import store, { persistor } from './store';
-import Router from './Router';
+import App from './App';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -25,14 +25,14 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const container = document.getElementById('root')!;
+const container = document.getElementById('root') || document.createElement('div');
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate persistor={persistor} loading={false}>
-        <Router />
+        <App />
         <GlobalStyle />
       </PersistGate>
     </Provider>
