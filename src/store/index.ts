@@ -7,8 +7,8 @@ import { productReducer } from './products/productsReducer';
 
 const rootReducer = combineReducers({
   login: loginReducer,
-  register: registerReducer,
-  product: productReducer,
+  // register: registerReducer,
+  products: productReducer,
 });
 
 const persistConfig = {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledCard, StyledCardPrice, StyledImage, StyledCardTitle, StyledCardFooter } from './StyledCard';
+import { StyledCard, StyledCardPrice, StyledImage, StyledCardTitle, StyledCardFooter, StyledImgWrapper } from './StyledCard';
 import { Button } from '../Button';
 
 export interface ProductType {
@@ -20,7 +20,9 @@ export const Card: React.FC<CardProps> = ({ product }) => {
   return (
     <StyledCard className="card">
       <Button onClick={clickHandler} label={'Add to bag'} className="card-button" reversed />
-      <StyledImage src={product.img} alt="product image" />
+      <StyledImgWrapper>
+        <StyledImage src={product.img} alt="product image" />
+      </StyledImgWrapper>
       <StyledCardFooter>
         <StyledCardTitle>{product.title}</StyledCardTitle>
         <StyledCardPrice>{product.price}</StyledCardPrice>

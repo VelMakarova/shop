@@ -14,9 +14,9 @@ import {
   StyledCol,
 } from './StyledFooter';
 
-export const Footer: React.FC = () => {
+export const Footer: React.FC<{ reversed?: boolean }> = ({ reversed }) => {
   return (
-    <StyledFooter>
+    <StyledFooter reversed={reversed}>
       <StyledCol>
         <Logo color="#fff" />
       </StyledCol>
@@ -92,8 +92,8 @@ export const Footer: React.FC = () => {
       </StyledFooterRights>
 
       <StyledLocation>
-        <Button label="store locator" textBtn reversed />
-        <Button label="lang" textBtn reversed />
+        <Button label="store locator" textBtn reversed={!reversed} />
+        <Button label="lang" textBtn reversed={!reversed} />
       </StyledLocation>
     </StyledFooter>
   );

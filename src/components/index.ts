@@ -1,3 +1,5 @@
+export * from './Arrows/LeftArrow';
+export * from './Arrows/RightArrow';
 export * from './Breadcrumbs';
 export * from './Button';
 export * from './Card';
@@ -5,8 +7,8 @@ export * from './Title';
 export * from './Filters';
 export * from './FormSelector';
 export * from './Footer';
-export * from '../containers/Header';
 export * from './Input';
+export * from './Loader';
 export * from './Logo';
 export * from './Nav';
 export * from './UserControls';

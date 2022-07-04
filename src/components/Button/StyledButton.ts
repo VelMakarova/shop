@@ -54,6 +54,7 @@ export const StyledButton = styled.button<StyledBtnProps>`
     top: 60%;
     left: 20px;
     right: 20px;
+    z-index: 1;
   }
   .card:hover &.card-button {
     display: flex;

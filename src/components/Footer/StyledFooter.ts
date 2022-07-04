@@ -2,15 +2,15 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import arrowIcon from '../../assets/link_arrow.svg';
 
-export const StyledFooter = styled.footer`
+export const StyledFooter = styled.footer<{ reversed?: boolean }>`
   flex: 0 0 auto;
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-template-rows: auto auto;
   grid-gap: 100px 100px;
   padding: 50px;
-  background-color: #000;
-  color: #fff;
+  background-color: ${(props) => (props.reversed ? '#f8ff2f' : '#000')};
+  color: ${(props) => (props.reversed ? '#000' : '#fff')};
 `;
 
 export const StyledCol = styled.div`

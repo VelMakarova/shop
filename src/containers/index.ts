@@ -1,3 +1,4 @@
+export * from './Carousel';
 export * from './LoginForm';
 export * from './RegisterForm';
 export * from './Catalog';

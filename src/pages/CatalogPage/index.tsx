@@ -1,7 +1,9 @@
-import React from 'react';
-import { Catalog } from '../../containers';
-import { Breadcrumbs, Header, Title, Filters, Footer } from '../../components';
+import React, { Suspense } from 'react';
+import { Breadcrumbs, Title, Filters, Footer, Loader } from '../../components';
+import { Header } from '../../containers';
 import { StyledMain } from './StyledCatalogPage';
+
+const Catalog = React.lazy(() => import('../../containers').then((res) => ({ default: res.Catalog })));
 
 export const CatalogPage: React.FC = () => {
   return (
@@ -13,7 +15,9 @@ export const CatalogPage: React.FC = () => {
         <div>
           <Filters />
         </div>
-        <Catalog />
+        <Suspense fallback={<Loader />}>
+          <Catalog />
+        </Suspense>
         <div>pagination</div>
       </StyledMain>
       <Footer />
