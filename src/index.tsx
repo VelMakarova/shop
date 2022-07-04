@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { createGlobalStyle } from 'styled-components';
 import store, { persistor } from './store';
-import App from './App';
+import App from './app/App';
 
 const GlobalStyle = createGlobalStyle`
   * {

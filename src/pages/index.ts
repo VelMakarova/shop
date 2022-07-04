@@ -1,2 +1,3 @@
-export * from './MainPage';
+export * from './CatalogPage';
+export * from './LandingPage';
 export * from './LoginPage';

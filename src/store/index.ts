@@ -1,14 +1,14 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { themeReducer } from './themeReducer';
-import { loginReducer } from './loginReducer';
-import { registerReducer } from './registerReducer';
+import { loginReducer } from './login/loginReducer';
+import { registerReducer } from './register/registerReducer';
+import { productReducer } from './products/productsReducer';
 
 const rootReducer = combineReducers({
-  theme: themeReducer,
   login: loginReducer,
   register: registerReducer,
+  product: productReducer,
 });
 
 const persistConfig = {
