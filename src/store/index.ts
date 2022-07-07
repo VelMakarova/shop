@@ -1,14 +1,14 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { persistStore, persistReducer } from 'redux-persist';
+import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { loginReducer } from './login/loginReducer';
-import { registerReducer } from './register/registerReducer';
-import { productReducer } from './products/productsReducer';
+import { loginReducer } from './login/login.reducer';
+import { productReducer } from './products/products.reducer';
+import { filterReducer } from './filter/filter.reducer';
 
 const rootReducer = combineReducers({
   login: loginReducer,
-  // register: registerReducer,
   products: productReducer,
+  filters: filterReducer,
 });
 
 const persistConfig = {
@@ -21,7 +21,12 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
   reducer: persistedReducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 });
 
 export const persistor = persistStore(store);
