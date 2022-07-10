@@ -4,11 +4,13 @@ import storage from 'redux-persist/lib/storage';
 import { loginReducer } from './login/login.reducer';
 import { productReducer } from './products/products.reducer';
 import { filterReducer } from './filter/filter.reducer';
+import { cartReducer } from './cart/cart.reducer';
 
 const rootReducer = combineReducers({
   login: loginReducer,
   products: productReducer,
   filters: filterReducer,
+  cart: cartReducer,
 });
 
 const persistConfig = {
