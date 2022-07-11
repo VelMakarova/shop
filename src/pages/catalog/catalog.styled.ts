@@ -5,4 +5,5 @@ export const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
   padding: 0 50px;
+  z-index: 1;
 `;

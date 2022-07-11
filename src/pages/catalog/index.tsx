@@ -1,22 +1,26 @@
 import React from 'react';
 import { Breadcrumbs, Title, Filters, Footer } from '../../components';
-import { Header } from '../../containers';
+import { Header, Cart } from '../../containers';
 import { StyledMain } from './catalog.styled';
 import { Catalog } from '../../containers';
+import { StyledCartContainer } from '../../containers/cart/cart.styled';
 
 const CatalogPage: React.FC = () => {
   return (
     <>
-      <Header isLoggedIn={true} isCatalogPage={true} />
-      <StyledMain>
-        <Breadcrumbs />
-        <Title title="COATS & OUTERWEAR" />
-        <div>
-          <Filters />
-        </div>
-        <Catalog />
-        <div>pagination</div>
-      </StyledMain>
+      <StyledCartContainer>
+        <Header isLoggedIn={true} isCatalogPage={true} />
+        <StyledMain>
+          <Breadcrumbs />
+          <Title title="COATS & OUTERWEAR" />
+          <div>
+            <Filters />
+          </div>
+          <Catalog />
+          <div>pagination</div>
+        </StyledMain>
+        <Cart />
+      </StyledCartContainer>
       <Footer />
     </>
   );

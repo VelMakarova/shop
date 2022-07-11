@@ -30,7 +30,7 @@ const products = [
   {
     id: '1',
     title: 'One Life Recycled Nylon Oversized Bomber',
-    price: '$ 1,555.00',
+    price: '1555.00',
     img: [img1, img25, img26, img27],
     category: 'COATS & OUTERWEAR',
     gender: 'man',
@@ -43,7 +43,7 @@ const products = [
   {
     id: '2',
     title: 'Sport Hybrid Tape Jacket',
-    price: '$ 790.00',
+    price: '790.00',
     img: [img2, img19, img20, img21],
     category: 'COATS & OUTERWEAR',
     gender: 'man',
@@ -56,7 +56,7 @@ const products = [
   {
     id: '3',
     title: 'Cyprus Bomber',
-    price: '$ 1,950.00',
+    price: '1950.00',
     img: [img3, img22, img23, img24],
     category: 'COATS & OUTERWEAR',
     gender: 'man',
@@ -69,7 +69,7 @@ const products = [
   {
     id: '4',
     title: 'Pad Tab Field Jacket',
-    price: '$ 1,850.00',
+    price: '1850.00',
     img: [img4, img13, img14, img15],
     category: 'COATS & OUTERWEAR',
     gender: 'man',
@@ -82,7 +82,7 @@ const products = [
   {
     id: '5',
     title: 'D2Leaf Dan Jacket',
-    price: '$ 1,215.00',
+    price: '1215.00',
     img: [img5, img16, img18, img21],
     category: 'COATS & OUTERWEAR',
     gender: 'man',
@@ -95,7 +95,7 @@ const products = [
   {
     id: '6',
     title: 'Hood Combo Dan Jean Jacket',
-    price: '$ 1,165.00',
+    price: '1165.00',
     img: [img6, img17, img27, img22],
     category: 'COATS & OUTERWEAR',
     gender: 'man',
@@ -108,7 +108,7 @@ const products = [
   {
     id: '7',
     title: 'Smiley Partially Organic Cotton Dan Jacket',
-    price: '$ 1,085.00',
+    price: '1085.00',
     img: [img7, img17, img27, img22],
     category: 'COATS & OUTERWEAR',
     gender: 'man',
@@ -121,7 +121,7 @@ const products = [
   {
     id: '8',
     title: 'Dan Jean Jacket',
-    price: '$ 945.00',
+    price: '945.00',
     img: [img8, img5, img3, img9],
     category: 'COATS & OUTERWEAR',
     gender: 'man',
@@ -134,7 +134,7 @@ const products = [
   {
     id: '9',
     title: 'Doodle Flag Dan Jacket',
-    price: '$ 1,355.00',
+    price: '1355.00',
     img: [img9, img14, img1, img2],
     category: 'COATS & OUTERWEAR',
     gender: 'man',
@@ -147,7 +147,7 @@ const products = [
   {
     id: '10',
     title: 'Big logo Windbreaker',
-    price: '$ 1,850.00',
+    price: '1850.00',
     img: [img10, img12, img22, img4],
     category: 'COATS & OUTERWEAR',
     gender: 'man',
@@ -160,7 +160,7 @@ const products = [
   {
     id: '11',
     title: 'Pаstel Sky Dan Jacket',
-    price: '$ 1,085.00',
+    price: '1085.00',
     img: [img11, img8, img6, img14],
     category: 'COATS & OUTERWEAR',
     gender: 'woman',
@@ -173,7 +173,7 @@ const products = [
   {
     id: '12',
     title: 'Sport Hybrid Tape Jacket',
-    price: '$ 1,085.00',
+    price: '1085.00',
     img: [img12, img13, img19, img26],
     category: 'COATS & OUTERWEAR',
     gender: 'man',

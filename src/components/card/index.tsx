@@ -20,7 +20,7 @@ export const Card: React.FC<{ product: ProductType }> = ({ product }) => {
       </StyledImgWrapper>
       <StyledCardFooter>
         <StyledCardTitle>{product.title}</StyledCardTitle>
-        <StyledCardPrice>{product.price}</StyledCardPrice>
+        <StyledCardPrice>{`$ ${product.price}`}</StyledCardPrice>
       </StyledCardFooter>
     </StyledCard>
   );

@@ -13,6 +13,8 @@ export interface ProductType {
 
 export interface CartItem {
   id: string;
+  amount: number;
+  price: number;
   size: string;
   color: string;
 }

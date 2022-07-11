@@ -5,12 +5,14 @@ import { loginReducer } from './login/login.reducer';
 import { productReducer } from './products/products.reducer';
 import { filterReducer } from './filter/filter.reducer';
 import { cartReducer } from './cart/cart.reducer';
+import { cartVisibilityReducer } from './cart-visibility/cart-visibility.reducer';
 
 const rootReducer = combineReducers({
   login: loginReducer,
   products: productReducer,
   filters: filterReducer,
   cart: cartReducer,
+  cartVisibility: cartVisibilityReducer,
 });
 
 const persistConfig = {

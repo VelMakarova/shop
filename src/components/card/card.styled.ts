@@ -6,24 +6,6 @@ export const StyledCard = styled.div`
   flex-direction: column;
   border-radius: 3px;
   overflow: hidden;
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    transition: all 0.1s ease;
-  }
-  &:hover:after {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .carousel &:after {
-    content: none;
-  }
-  .carousel &:hover img {
-    //transform: scale(1.2);
-  }
 `;
 
 export const StyledCardFooter = styled.div`
@@ -42,7 +24,30 @@ export const StyledCardPrice = styled.div`
 `;
 
 export const StyledImgWrapper = styled.div`
+  position: relative;
   overflow: hidden;
+  z-index: 0;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.1s ease;
+  }
+
+  &:hover:after {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .carousel &:after {
+    content: none;
+  }
+
+  .card:hover & img {
+    transform: scale(1.05);
+  }
 `;
 
 export const StyledImage = styled.img`
