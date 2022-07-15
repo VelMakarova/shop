@@ -3,16 +3,18 @@ import { useNavigate } from 'react-router-dom';
 import { StyledLink, StyledNav } from './nav.styled';
 import { paths } from '../../paths';
 import { useAppDispatch } from '../../hooks';
-import { setFilters } from '../../store/filter/filter.reducer';
+import { setGender } from '../../store/filter/filter.slice';
 
 export const Nav: React.FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
+
   const transitionHandler = (e: React.MouseEvent<HTMLAnchorElement>, filterName: string) => {
     e.preventDefault();
-    dispatch(setFilters(filterName));
-    navigate(paths.CATALOG);
+    dispatch(setGender(filterName));
+    navigate(paths.CATALOG, { state: { filter: 'gender' } });
   };
+
   return (
     <StyledNav className="nav">
       <StyledLink to={paths.CATALOG} onClick={(e) => transitionHandler(e, 'man')}>

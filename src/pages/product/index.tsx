@@ -15,7 +15,7 @@ import {
 } from './product.styled';
 import { StyledCartContainer } from '../../containers/cart/cart.styled';
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { addToCart } from '../../store/cart/cart.reducer';
+import { addToCart } from '../../store/cart/cart.slice';
 import { CartItem } from '../../types';
 import { paths } from '../../paths';
 import { Cart, Header } from '../../containers';

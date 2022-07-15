@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyledLanding } from './landing.styled';
-import { Header, Carousel } from '../../containers';
+import { Header } from '../../containers';
 import { Banner, Footer } from '../../components';
+import { CategoryCarousel } from '../../components/category-carousel';
 
 export const Landing: React.FC = () => {
   return (
@@ -11,12 +12,10 @@ export const Landing: React.FC = () => {
         <Banner />
       </section>
       <section>
-        <Carousel title="Tranding now" />
+        <CategoryCarousel />
       </section>
       <section>Lookbook</section>
-      <section>
-        <Carousel title="new arrivals" />
-      </section>
+      <section>carousel</section>
       <section>collections</section>
       <section>about us</section>
       <section>subscribe</section>

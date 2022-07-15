@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { StyledLoginForm } from './login-form.styled';
 import { Input, Button } from '../../components';
 import { useAppDispatch } from '../../hooks';
-import { login } from '../../store/login/login.reducer';
+import { login } from '../../store/login/login.slice';
 
 interface LoginFormShape {
   email: string;

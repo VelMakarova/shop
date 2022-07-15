@@ -2,7 +2,7 @@ import React from 'react';
 import { StyledError, StyledLink } from './error.styled';
 import { paths } from '../../paths';
 
-const ErrorPage = () => {
+const ErrorPage: React.FC = () => {
   return (
     <StyledError>
       <span>404</span>

@@ -1,18 +1,16 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { loginReducer } from './login/login.reducer';
-import { productReducer } from './products/products.reducer';
-import { filterReducer } from './filter/filter.reducer';
-import { cartReducer } from './cart/cart.reducer';
-import { cartVisibilityReducer } from './cart-visibility/cart-visibility.reducer';
+import { loginReducer } from './login/login.slice';
+import { productReducer } from './products/products.slice';
+import { filterReducer } from './filter/filter.slice';
+import { cartReducer } from './cart/cart.slice';
 
 const rootReducer = combineReducers({
   login: loginReducer,
   products: productReducer,
   filters: filterReducer,
   cart: cartReducer,
-  cartVisibility: cartVisibilityReducer,
 });
 
 const persistConfig = {

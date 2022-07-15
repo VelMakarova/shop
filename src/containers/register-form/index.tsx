@@ -3,18 +3,13 @@ import { Input, Button } from '../../components';
 import { StyledLoginForm } from '../login-form/login-form.styled';
 import { useNavigate } from 'react-router-dom';
 import { paths } from '../../paths';
-
-interface RegisterFormShape {
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-}
+import { RegisterForm as RegisterFormShape } from '../../types';
 
 const formInitial: RegisterFormShape = {
+  id: '',
   firstName: '',
   lastName: '',
-  email: '',
+  login: '',
   password: '',
 };
 
@@ -36,7 +31,7 @@ export const RegisterForm: React.FC = () => {
     <StyledLoginForm onSubmit={formSubmitHandler}>
       <Input name="firstName" onChange={inputHandler} placeholder="first name" value={formValue.firstName} />
       <Input name="lastName" onChange={inputHandler} placeholder="last name" value={formValue.lastName} />
-      <Input name="email" onChange={inputHandler} placeholder="email" value={formValue.email} />
+      <Input name="email" onChange={inputHandler} placeholder="email" value={formValue.login} />
       <Input name="password" onChange={inputHandler} placeholder="password" value={formValue.password} />
       <Button type="submit" text="sign up" />
     </StyledLoginForm>

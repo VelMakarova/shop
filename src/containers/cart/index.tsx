@@ -1,5 +1,6 @@
-import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../hooks';
+import React, { useContext } from 'react';
+import { useAppSelector } from '../../hooks';
+import { CartContext } from '../../app/App';
 import {
   StyledCart,
   StyledStickyCartContent,
@@ -12,20 +13,23 @@ import {
 } from './cart.styled';
 import { CartItem } from './cart-item';
 import { Button } from '../../components';
-import { hideCart } from '../../store/cart-visibility/cart-visibility.reducer';
 import { EmptyCart } from './empty-cart';
 
 export const Cart: React.FC = () => {
-  const dispatch = useAppDispatch();
-  const isCartOpen = useAppSelector((state) => state.cartVisibility);
   const products = useAppSelector((state) => state.cart) || [];
+  const cartState = useContext(CartContext);
+
+  const toggle = () => {
+    cartState.toggleCartOpen(false);
+    console.log(cartState.isOpen);
+  };
 
   return (
-    <StyledCart isCartOpen={isCartOpen}>
+    <StyledCart isCartOpen={cartState.isOpen}>
       <StyledStickyCartContent>
         <StyledCartHeader>
           <StyledCartTitle>Shopping cart</StyledCartTitle>
-          <StyledCartCloseBtn onClick={() => dispatch(hideCart())} />
+          <StyledCartCloseBtn onClick={toggle} />
         </StyledCartHeader>
         <StyledCartBody>
           {products.length ? (

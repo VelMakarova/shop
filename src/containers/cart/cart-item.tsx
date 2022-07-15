@@ -9,7 +9,7 @@ import {
   StyledCartItemAmount,
 } from './cart.styled';
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { removeFromCart, decreaseAmount, increaseAmount } from '../../store/cart/cart.reducer';
+import { removeFromCart, decreaseAmount, increaseAmount } from '../../store/cart/cart.slice';
 
 export const CartItem: React.FC<{ id: string }> = ({ id }) => {
   const dispatch = useAppDispatch();
